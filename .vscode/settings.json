@@ -180,9 +180,9 @@
       "panel.background": "#222327", // Darkened base background panel container
       "panel.border": "#14913a1f", // Separator outline border directly below code canvas, and content/sidebar border
       "panelTitle.border": "#14913a6e", // The panel's bottom border
-      "panelTitle.activeForeground": "#30da93e7", // Vibrant active title color matching your theme's accents
+      "panelTitle.activeForeground": "#30da93e7", // Active title color
       // "panelTitle.activeBorder": "#199e41e3", // Bottom border (selected tab)
-      "panelTitle.inactiveForeground": "#607a86", // Muted title label text for minimized distraction
+      "panelTitle.inactiveForeground": "#607a86", // Muted title label text
       "panelStickyScroll.background": "#1e1f22",
       
       // ? Top bar function title
@@ -330,6 +330,19 @@
     ".monaco-editor .minimap": {
       "box-shadow": "-12px 0px 20px -4px rgba(0, 0, 0, 0.20) !important", // left shadow
     },
+    
+    
+    // -----------------------------------//
+    // Explorer Stacked Shadow (FileList) //
+    // -----------------------------------//
+    // Targets the last pinned folder element at the bottom of the sticky header stack
+    // ".explorer-folders-view .monaco-tree-sticky-container .monaco-tree-sticky-row:last-child .monaco-tl-row": {
+    ".explorer-folders-view .monaco-tree-sticky-container": {
+      "box-shadow": "0 8px 12px -4px rgba(0, 0, 0, 0.15) !important",
+      "backdrop-filter": "blur(4px) !important", 
+      "border-bottom": "1px solid #3c3f41 !important",
+      // "border-bottom": "1px solid #2e7d3255 !important",
+    }
     
     
   },
