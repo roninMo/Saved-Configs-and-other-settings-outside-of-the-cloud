@@ -57,6 +57,7 @@
   "editor.cursorBlinking": "smooth", // smooth fading
   "editor.smoothScrolling": true, // animated scrolling
   "editor.cursorSurroundingLines": 8, // arrow keys near the bottom will traverse
+  "editor.mouseWheelScrollSensitivity": 1.5,
   "editor.linkedEditing": true, // edits the opening/closing tabs at the same time
   
   // --- Smart Tab Naming for Monorepos --- //
@@ -125,7 +126,8 @@
    * ? JSDoc (function, var, etc.) popup hover custom theme styles 
    * * For "Night Owl Theme": Offsets the look of the jsdoc hovers to help readability amidst the code
    */
-  // #region theme customnizations
+  // #region Theme customizations
+  // #region Editor Customizations
   "workbench.colorCustomizations": {
     //------------------------------------//
     // * Global Settings                  //
@@ -141,7 +143,7 @@
     
     
     //------------------------------------//
-    // * Night Owl Theme                  //
+    // Night Owl Theme                    //
     //------------------------------------//
     // "[Night Owl Theme]": {
     //   // ? JSDoc Function Tooltip
@@ -153,7 +155,7 @@
     
     
     //------------------------------------//
-    // * Rider Dark Theme                 //
+    // Rider Dark Theme                   //
     //------------------------------------//
     "[JetBrains Rider Dark Theme]": {
       // ? JSDoc Function Tooltip
@@ -222,7 +224,82 @@
     
   },
   // #endregion
-  
+  // #region Token Color Customizations (vars, tags, etc.)
+  "editor.tokenColorCustomizations": {
+    //------------------------------------//
+    // Rider Dark Theme                   //
+    //------------------------------------//
+    "[JetBrains Rider Dark Theme]": {
+      "textMateRules": [
+        {
+          "name": "JSX and HTML properties/attributes",
+          "scope": [
+            "entity.other.attribute-name",
+            "entity.other.attribute-name.js",
+            "entity.other.attribute-name.jsx",
+            "entity.other.attribute-name.tsx"
+          ],
+          "settings": {
+            "foreground": "#7190ec"
+          }
+        },
+        {
+          "name": "JSX and HTML stringified prop values",
+          "scope": [
+            "string.quoted.double.html",
+            "string.quoted.single.html",
+            "string.quoted.double.js",
+            "string.quoted.single.js",
+            "string.quoted.double.jsx",
+            "string.quoted.single.jsx",
+            "string.quoted.double.tsx",
+            "string.quoted.single.tsx",
+            "meta.embedded.expression.string"
+          ],
+          "settings": {
+            "foreground": "#32b966" 
+          }
+        },
+        /* {
+            "name": "Standard JavaScript Comments (Single and Block)",
+            "scope": [
+                "comment.line.double-slash.js",
+                "comment.line.double-slash.jsx",
+                "comment.line.double-slash.ts",
+                "comment.line.double-slash.tsx",
+                "comment.block.js",
+                "comment.block.jsx",
+                "comment.block.ts",
+                "comment.block.tsx"
+            ],
+            "settings": {
+                "foreground": "#7A8A99",
+                "fontStyle": "italic"
+            }
+        },*/
+        {
+          "name": "Target only comments wrapped inside JSX HTML tags",
+          "scope": [
+            "meta.tag comment.line.double-slash",
+            "meta.tag punctuation.definition.comment",
+            "meta.tag.attributes comment.line.double-slash",
+            "meta.jsx.children comment.block.js",
+            "meta.jsx.children comment.block.jsx",
+            "meta.jsx.children comment.block.ts",
+            "meta.jsx.children comment.block.tsx",
+            "meta.jsx.children punctuation.definition.comment",
+            "meta.jsx.children punctuation.definition.bracket.curly"
+          ],
+          "settings": {
+            "foreground": "#727683",
+            "fontStyle": "italic"
+          }
+        }
+      ]
+    }
+  },
+  // #endregion
+  // #endregion
   
   
   
