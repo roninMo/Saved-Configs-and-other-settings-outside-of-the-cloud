@@ -244,39 +244,22 @@
           }
         },
         {
-          "name": "JSX and HTML stringified prop values",
+          "name": "Standard JavaScript Comments (Single and Block)",
           "scope": [
-            "string.quoted.double.html",
-            "string.quoted.single.html",
-            "string.quoted.double.js",
-            "string.quoted.single.js",
-            "string.quoted.double.jsx",
-            "string.quoted.single.jsx",
-            "string.quoted.double.tsx",
-            "string.quoted.single.tsx",
-            "meta.embedded.expression.string"
+              "comment.line.double-slash.js",
+              "comment.line.double-slash.jsx",
+              "comment.line.double-slash.ts",
+              "comment.line.double-slash.tsx",
+              "comment.block.js",
+              "comment.block.jsx",
+              "comment.block.ts",
+              "comment.block.tsx"
           ],
           "settings": {
-            "foreground": "#32b966" 
+            "foreground": "#7f8d9e",
+            "fontStyle": "italic"
           }
         },
-        /* {
-            "name": "Standard JavaScript Comments (Single and Block)",
-            "scope": [
-                "comment.line.double-slash.js",
-                "comment.line.double-slash.jsx",
-                "comment.line.double-slash.ts",
-                "comment.line.double-slash.tsx",
-                "comment.block.js",
-                "comment.block.jsx",
-                "comment.block.ts",
-                "comment.block.tsx"
-            ],
-            "settings": {
-                "foreground": "#7A8A99",
-                "fontStyle": "italic"
-            }
-        },*/
         {
           "name": "Target only comments wrapped inside JSX HTML tags",
           "scope": [
@@ -291,10 +274,51 @@
             "meta.jsx.children punctuation.definition.bracket.curly"
           ],
           "settings": {
-            "foreground": "#727683",
+            "foreground": "#727684",
             "fontStyle": "italic"
           }
-        }
+        },
+        {
+          "name": "String Single/Double quotes",
+          "scope": [
+            "string.quoted.double.html",
+            "string.quoted.single.html",
+            "string.quoted.double.js",
+            "string.quoted.single.js",
+            "string.quoted.double.jsx",
+            "string.quoted.single.jsx",
+            "string.quoted.double.tsx",
+            "string.quoted.single.tsx",
+            "meta.embedded.expression.string"
+          ],
+          "settings": {
+            "foreground": "#34b966" 
+          }
+        },
+        {
+          "name": "String Interpolation / Template Literals Text",
+          "scope": [
+            "string.template",
+            "string.quoted.template",
+            "punctuation.definition.string.template"
+          ],
+          "settings": {
+            "foreground": "#34b966"
+          }
+        },
+        {
+          "name": "String Interpolation Braces and Expressions",
+          "scope": [
+            "meta.embedded.line-expression",
+            "meta.embedded.expression",
+            "punctuation.definition.template-expression",
+            "meta.template.expression"
+          ],
+          "settings": {
+            "foreground": "#c664fc", 
+            "fontStyle": "italic"
+          }
+        },
       ]
     }
   },
