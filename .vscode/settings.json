@@ -244,6 +244,19 @@
           }
         },
         {
+          "name": "Variables passed as JSX property values",
+          "scope": [
+            "meta.tag.attributes variable.other.readwrite",
+            "meta.tag.attributes variable.other.object",
+            "meta.tag.attributes variable",
+            "meta.attribute variable"
+          ],
+          "settings": {
+            "foreground": "#4dbcc4"
+          }
+        },
+        
+        {
           "name": "Standard JavaScript Comments (Single and Block)",
           "scope": [
               "comment.line.double-slash.js",
@@ -261,7 +274,7 @@
           }
         },
         {
-          "name": "Target only comments wrapped inside JSX HTML tags",
+          "name": "Comments wrapped inside JSX HTML tags",
           "scope": [
             "meta.tag comment.line.double-slash",
             "meta.tag punctuation.definition.comment",
@@ -279,7 +292,7 @@
           }
         },
         {
-          "name": "String Single/Double quotes",
+          "name": "Strings (Single/Double quotes)",
           "scope": [
             "string.quoted.double.html",
             "string.quoted.single.html",
@@ -296,7 +309,7 @@
           }
         },
         {
-          "name": "String Interpolation / Template Literals Text",
+          "name": "String Interpolation / Template Literals Text & Backticks",
           "scope": [
             "string.template",
             "string.quoted.template",
@@ -307,18 +320,35 @@
           }
         },
         {
-          "name": "String Interpolation Braces and Expressions",
+          "name": "String Interpolation Brackets Only",
           "scope": [
-            "meta.embedded.line-expression",
-            "meta.embedded.expression",
-            "punctuation.definition.template-expression",
-            "meta.template.expression"
+            "punctuation.definition.template-expression.begin",
+            "punctuation.definition.template-expression.end"
           ],
           "settings": {
-            "foreground": "#c664fc", 
-            "fontStyle": "italic"
+            "foreground": "#c664fc"
           }
         },
+        {
+          "name": "String Interpolation Variables and Expressions",
+          "scope": [
+            "string.template variable",
+            "string.template variable.other",
+            "string.template variable.other.readwrite",
+            "string.template variable.other.property",
+            "string.template variable.other.object",
+            "string.quoted.template variable",
+            "meta.template.expression.js variable",
+            "meta.template.expression.ts variable",
+            "meta.template.expression.js variable.other.readwrite.js",
+            "meta.template.expression.ts variable.other.readwrite.ts"
+          ],
+          "settings": {
+            "foreground": "#b856ec",
+            "fontStyle": "italic"
+          }
+        }
+        
       ]
     }
   },
