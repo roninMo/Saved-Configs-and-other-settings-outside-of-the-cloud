@@ -40,11 +40,11 @@
   
   
   
+  // #region QoL settings
   /** 
    * ? Vscode Editor's QoL settings
    * Includes a variety of stuff
    */
-  // #region QoL settings
   // --- VsCode Sidebar --- //
   "workbench.activityBar.location": "top", // sidebar tab icons
   "workbench.activityBar.compact": false,
@@ -75,16 +75,16 @@
   "outline.collapseItems": "alwaysCollapse", // for readability
   "breadcrumbs.enabled": true, // Enables folder/function navigation below the file tabs
   "breadcrumbs.symbolSortOrder": "position",
+  
+  
+  
+  
   // #endregion
-  
-  
-  
-  
+  // #region Terminal settings
   /** 
    * ? Vscode's Terminal's configuration
    * Primarily adjusting the font, as well as some other settings
    */
-  // #region Terminal settings
   // --- General --- //
   "terminal.integrated.shellIntegration.showCommandGuide": true,
   "terminal.integrated.rightClickBehavior": "copyPaste",
@@ -116,17 +116,20 @@
   "terminal.integrated.tabs.title": "${process}",
   // "terminal.integrated.tabs.separator": " :test: ", // Isn't working 
   "terminal.integrated.tabs.description": "${process}",
+  
+  
+  
+  
   // #endregion
-  
-  
-  
-  
+  // #region Theme customizations
   /** 
    * -> Additional theme customizations
-   * ? JSDoc (function, var, etc.) popup hover custom theme styles 
-   * * For "Night Owl Theme": Offsets the look of the jsdoc hovers to help readability amidst the code
+   * {} Editor Customizations - Adjusted Rider Theme to add stuff that hasn't been implemented
+   * * Token Color Customizations - Adjusted the themeing to make Typescript better color coded
+   * * Custom UI Styles - Better readability and streamlined look of VSCode's File view
+   * * JSDoc (function, var, etc.) popup hover custom theme styles 
+   * * Tagged Comment Themes - Helpful colorized notes while traversing code.
    */
-  // #region Theme customizations
   // #region Editor Customizations
   "workbench.colorCustomizations": {
     //------------------------------------//
@@ -231,16 +234,20 @@
     //------------------------------------//
     "[JetBrains Rider Dark Theme]": {
       "textMateRules": [
+        // #region HTML Custom Styles
         {
-          "name": "JSX and HTML properties/attributes",
+          "name": "Target only HTML JSX properties/attributes",
           "scope": [
-            "entity.other.attribute-name",
+            "entity.other.attribute-name.html",
             "entity.other.attribute-name.js",
             "entity.other.attribute-name.jsx",
-            "entity.other.attribute-name.tsx"
+            "entity.other.attribute-name.tsx",
+            "meta.tag.attributes.js",
+            "meta.tag.attributes.jsx",
+            "meta.tag.attributes.tsx"
           ],
           "settings": {
-            "foreground": "#7190ec"
+            "foreground": "#7190eb" 
           }
         },
         {
@@ -256,6 +263,82 @@
           }
         },
         
+        
+        
+        
+        // #endregion
+        // #region CSS Custom Styles
+        {
+          "name": "Target HTML Tags/Elements in SCSS",
+          "scope": [
+            "entity.name.tag.scss",
+            "entity.name.tag.css"
+          ],
+          "settings": {
+            "foreground": "#77d6c2" 
+          }
+        },
+        {
+          "name": "Universal Class Declarations",
+          "scope": [
+            "entity.other.attribute-name.class"
+          ],
+          "settings": {
+            "foreground": "#a9d8db" 
+          }
+        },
+        {
+          "name": "Robust @apply Class Override (SCSS + CSS)",
+          "scope": [
+            // Forces classes inside an active @apply wrapper
+            "meta.at-rule.apply entity.other.attribute-name.class",
+            "meta.at-rule.apply.scss entity.other.attribute-name.class",
+            "meta.at-rule.apply.css entity.other.attribute-name.class",
+            "source.css.scss meta.at-rule.apply variable.scss",
+            "source.scss meta.at-rule.apply variable.scss"
+          ],
+          "settings": {
+            "foreground": "#2fc6e2"
+          }
+        },
+        {
+          "name": "Universal Tailwind @apply directive token",
+          "scope": [
+            "keyword.control.at-rule"
+          ],
+          "settings": {
+            "foreground": "#4d85fd" 
+          }
+        },
+        {
+          "name": "Universal Parent Nesting Symbol (&)",
+          "scope": [
+            "keyword.operator.combinator",
+            "keyword.operator.parent-selector",
+            "variable.language.this",
+            "entity.name.tag.reference"
+          ],
+          "settings": {
+            "foreground": "#50a5ff" 
+          }
+        },
+        {
+          "name": "Universal State Modifiers (:hover, :focus, etc.)",
+          "scope": [
+            "entity.other.attribute-name.pseudo-class",
+            "entity.other.attribute-name.pseudo-element",
+            "entity.other.attribute-name.tag.pseudo-class"
+          ],
+          "settings": {
+            "foreground": "#b19bce" 
+          }
+        },
+        
+        
+        
+        
+        // #endregion
+        // #region Comments Custom Styles
         {
           "name": "Standard JavaScript Comments (Single and Block)",
           "scope": [
@@ -349,17 +432,19 @@
           }
         }
         
+        
+        
+        
+        // #endregion
       ]
     }
   },
   // #endregion
-  // #endregion
-  
-  
-  
+  // #region Custom UI Styles (Makes VSCode look a lot more streamline)
   /**
    * -> "Custom UI Styles" Extension
    * * Lets you add custom styles to VSCode's actual elements.
+   * * Makes VSCode look a lot more streamline, and improces readability a lot while navigating
    * ? To reload updated styles: "Ctrl + Shift + P" -> "Custom UI Style: Reload"
    */
   "custom-ui-style.stylesheet": {
@@ -484,6 +569,8 @@
   
   
   
+  // #endregion
+  // #region Tagged Comment Themes
   /** 
    * Tagged comment themes
    */
@@ -561,9 +648,12 @@
   
   
   
+  // #endregion
   
   
   
+  
+  // #endregion
   
   
   //----------------------------------------------------------------//
