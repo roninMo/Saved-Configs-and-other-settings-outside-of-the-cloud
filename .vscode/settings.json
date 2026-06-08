@@ -6,9 +6,6 @@
     The configurations listed below are a mix of performance, display optimizations that vscode provides by default,
     and custom styling to make vscode feel more streamline while using this for developing full stack applications.
     
-    I've grown accustomed to the "Night Owl" dark theme, but then recently started using Rider for projects
-    for different applications, and it's definitely helped with those tasks.
-
     Here's a comprehensive list of the things it adds, and what plugins they use for each one:
       ? gpu acceleration for terminal specific tasks, windows shell integration, automated tasks, custom tab name definitions
       ? adds smooth(interpolated) scrolling in general (files, sidebar, and padding when scrolling (arrow keys) to see the current code)
@@ -624,6 +621,12 @@
     },
     {
       "tag": "todo", "color": "#FF8C00", 
+      "backgroundColor": "#00000033",
+      "strikethrough": false, "underline": false,
+      "bold": false, "italic": true
+    },
+    {
+      "tag": "todo:", "color": "#FF8C00", 
       "backgroundColor": "#00000033",
       "strikethrough": false, "underline": false,
       "bold": false, "italic": true
