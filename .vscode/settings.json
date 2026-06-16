@@ -451,10 +451,12 @@
       
       // Remove the extra padding from the headers
       "h1:first-child, h2:first-child, h3:first-child": {
-        "margin-top": "2px !important",
+        "margin-top": "0px !important",
         "margin-bottom": "4px !important",
-        "display": "inline-flex !important",
-        "align-items": "center !important",
+        "padding-top": "0px !important",
+        // "padding-bottom": "4px !important",
+        // "display": "inline-flex !important",
+        // "align-items": "center !important",
         // "border": "1px solid #ffffff !important",
         // "color": "#2b1fc3"
       },
@@ -631,6 +633,18 @@
       "strikethrough": false, "underline": false,
       "bold": false, "italic": true
     },
+    { // For a nested region's readability
+      "tag": "#region -", "color": "#7fa2b0", 
+      "backgroundColor": "#00000033",
+      "strikethrough": false, "underline": false,
+      "bold": false, "italic": true
+    },
+    { // For a nested region's readability
+      "tag": "#region:", "color": "#7fa2b0", 
+      "backgroundColor": "#00000033",
+      "strikethrough": false, "underline": false,
+      "bold": false, "italic": true
+    },
     {
       "tag": "#region", "color": "#608291", 
       "backgroundColor": "#00000033",
@@ -682,6 +696,7 @@
     "interp",
     "lerp",
     "oultine",
+    "pathing",
     "Signup",
     "tailwindcss",
     "tailwindplus",
@@ -710,6 +725,7 @@
   "chat.disableAIFeatures": true,
   "editor.trimAutoWhitespace": false,
   "code-runner.defaultLanguage": "typescript",
+  "update.mode": "none",
   
   
   
